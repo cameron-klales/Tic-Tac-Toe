@@ -19,17 +19,18 @@ int main(void){
         int delta = determine_order(games);
         int d;
         
-     while (z==1;){
+     while (z=1){
         blanker(board);
-        puts("1");
         for(i=0;i<9;i++){
                 if (delta == 0){
+                        ++delta;
+
                         print_board(board);
                         player_move(board, games[0]);
                                 if (1==winner_found(board)){
                                 print_board(board);
                                 i = 9; 
-                                ++delta;
+                          
                                 continue;
                                 };
                 }
@@ -49,7 +50,8 @@ int main(void){
                         
                 }
         }
-         scanf("would you like to play again? (press 1 for yes and any other number for no)", &z);
+         scanf("would you like to play again? (press 1 for yes and any other num
+ber for no)", &z);
 }
 }
 void blanker(char gamma[]){
@@ -62,7 +64,8 @@ void blanker(char gamma[]){
 void print_board(char board[]){
 
         puts("");
-        printf(" %c | %c | %c \n",board[0],board[1],board[2]);// prints array values to the board
+        printf(" %c | %c | %c \n",board[0],board[1],board[2]);// prints array va
+lues to the board
         puts("-----------");
         printf(" %c | %c | %c \n",board[3],board[4],board[5]);
         puts("-----------");
@@ -73,7 +76,7 @@ int determine_order(char xo[]){
         char z;
 
         while(1){
-        puts("What letter would you like to play as?(choose x or o");
+        puts("What letter would you like to play as?(choose x or o)");
         scanf("%c", &z);
 
                         if(z == 'x' || z == 'X'){
@@ -90,7 +93,8 @@ int determine_order(char xo[]){
                                 return 1;
                         }else{
                 puts("Your Input was not Valid. Try again");
-                continue; // Loop ensures user input is valid. Once the user has given valid input, sets and returns z to capital x or o.
+                continue; // Loop ensures user input is valid. Once the user has
+ given valid input, sets and returns z to capital x or o.
                         }
                 }
 }
