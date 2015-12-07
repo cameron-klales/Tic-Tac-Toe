@@ -1,4 +1,4 @@
-void simple(char board[], char j){
+void simplemove(char board[], char j){
         if(board[0] != ' '){
                 board[0] = j;
         }else if(board[2] != ' '){
