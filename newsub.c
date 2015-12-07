@@ -5,8 +5,8 @@ void blanker(char gamma[]);
 void print_board(char board[]);
 int determine_order(char xo[]);
 int winner_found(char board[]);
-int win_chance(char board[], char j)
-void defaultmove(char board[], char j)
+int win_chance(char board[], char j);
+void defaultmove(char board[], char j);
 
 int main(void){
         char demoboard[9] = {'1','2','3','4','5','6','7','8','9'};
