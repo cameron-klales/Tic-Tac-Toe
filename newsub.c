@@ -6,6 +6,7 @@ void print_board(char board[]);
 int determine_order(char xo[]);
 int winner_found(char board[]);
 int win_chance(char board[], char j)
+void defaultmove(char board[], char j)
 
 int main(void){
         char demoboard[9] = {'1','2','3','4','5','6','7','8','9'};
@@ -14,7 +15,7 @@ int main(void){
         int i;
         int z=1;
         int delta = determine_order(games);
-       
+        int d;
         
         while (z==1){     
         for(i=0;i<9;i++){
@@ -30,10 +31,20 @@ int main(void){
                 ++delta;
                 continue;
                 }else if(delta ==1){
-                        win_chance(board, game[1]);
-                --delta;
-                continue;
+                        
+                        d = win_chance(board, game[1]);
+                        if(d!=0){
+                                defaultmove(char board[], char j)
+                        }if (1==winner_found(board){
+                                print_board(board);
+                                winner_found(board);
+                                i = 9;
+                        }
+                        --delta;
+                        continue;
         }
+        scanf("would you like to play again? (press 1 for yes and any other number for no)", &z);
+        
 }
 }
 void blanker(char gamma[]){
@@ -76,4 +87,27 @@ int determine_order(char xo[]){
                 continue; // Loop ensures user input is valid. Once the user has given valid input, sets and returns z to capital x or o.
                         }
                 }
+}
+void defaultmove(char board[], char j){
+        if(board[0] != ' '){
+                board[0] = j;
+        }else if(board[2] != ' '){
+                board[2] = j;
+        }else if(board[6] != ' '){
+                board[6] = j;
+        }else if(board[8] != ' '){
+                board[8] = j;
+        }else if(board[4] != ' '){
+                board[4] = j;
+        }else if(board[3] != ' '){
+                board[3] = j;
+        }else if(board[5] != ' '){
+                board[5] = j;
+        }else if(board[1] != ' '){
+                board[1] = j;
+        }else if(board[7] != ' '){
+                board[7] = j;
+        }else{
+                return;
+        }
 }
