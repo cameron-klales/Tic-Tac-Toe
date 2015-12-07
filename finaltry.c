@@ -19,7 +19,7 @@ int main(void){
         int delta = determine_order(games);
         int d;
         
-     
+     while (z==1;){
         blanker(board);
         puts("1");
         for(i=0;i<9;i++){
@@ -29,12 +29,12 @@ int main(void){
                                 if (1==winner_found(board)){
                                 print_board(board);
                                 i = 9; 
-                                
+                                ++delta;
+                                continue;
                                 };
                 }
-                ++delta;
-                continue;
-                } if(delta ==1){
+                
+                if(delta ==1){
                         
                         d = win_chance(board, games[1]);
                         if(d!=0){
@@ -47,16 +47,17 @@ int main(void){
                         }
                         --delta;
                         
+                }
         }
-        scanf("would you like to play again? (press 1 for yes and any other number for no)", &z);
-        
-
+         scanf("would you like to play again? (press 1 for yes and any other number for no)", &z);
+}
 }
 void blanker(char gamma[]){
         int i;
         for(i=0;i<9;i++){
                 gamma[i]=' ';
         }
+        return;
 }
 void print_board(char board[]){
 
