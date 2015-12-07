@@ -199,3 +199,28 @@ int win_chance(char board[], char j){
                 }
         return 1;
 }
+
+int player_move(char board[], char player_char){
+        int i;
+        
+        while (1){
+        i = getspace();
+        if (board[i] == ' '){
+                board[i] = player_char;
+                return 0;
+        }
+        }
+}int getspace( void ){ // makes sure user input is valid
+        int a;
+        while (1){
+                puts("Where would you like to move?");
+                scanf("\n %d", &a);
+                        if ( a=<9 || a>=1){
+                                return a;
+                        }else{
+                                puts("try again");
+                                continue;
+                        }
+                }
+return 0;
+}
