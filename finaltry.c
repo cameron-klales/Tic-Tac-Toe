@@ -29,9 +29,7 @@ int main(void){
                         player_move(board, games[0]);
                                 if (1==winner_found(board)){
                                 print_board(board);
-                                i = 9; 
-                          
-                                continue;
+                              
                                 };
                 }
                 
@@ -42,9 +40,7 @@ int main(void){
                                 defaultmove(board, games[1]);
                         }if (1==winner_found(board)){
                                 print_board(board);
-                                winner_found(board);
-                                i = 9;
-                                
+                               
                         }
                         --delta;
                         
