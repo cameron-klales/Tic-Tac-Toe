@@ -1,3 +1,39 @@
+
+Cameron James Klales <tuf62129@astro.ocis.temple.edu>	Mon, Dec 7, 2015 at 12:08 AM
+To: tuf62129@temple.edu
+/*
+ *
+ * Location: Temple University CIS 1057 Fall 2015
+ * Programmer: J. Michael Evatt
+ * Class: Introduction to C Programming
+ * Assignment:
+ * Date:
+ * Description:
+*/
+enum board_locales {R1C1, R1C2, R1C3, R2C1, R2C2, R2C3, R3C1, R3C2, R3C3};
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "Group.h"
+#define C_PROGRAMMER_NAME "J. Michael Evatt"
+#define MAX_LEN 1024
+
+#define BOARD_SIZE 9
+
+int winner_found(char board[], int player, int moves);
+int win_chance(char board[]);
+int player_move(char board[], int location, char player_char);
+int opposite(int last_move);
+void computer_move(char board[], int last_move, char computer_char);
+char determine_order(void);
+int getspace( void );
+int open_file(char *fname);
+void print_image(FILE *fptr);
+void implement_user_move(char board[ ], char c);
+void print_board( char board[]);
+
+
+
 int main( void )
 {
         int winner; //Flag for winner existence.
