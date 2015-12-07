@@ -1,23 +1,25 @@
-int winner_found(char board[], int player, int moves){
-
-if((board[0] != ' ') && (board[0] == board[1])&&(board[0] == board[2]))
-        return player; //Player Won!
-else if((board[3] != ' ') && (board[3] == board[4])&&(board[3] == board[5]))
-        return player; //Player Won!
-else if((board[6] != ' ') && (board[6] == board[7])&&(board[6] == board[8]))
-        return player; //Player Won!
-else if((board[0] != ' ') && (board[0] == board[4])&&(board[0] == board[8]))
-        return player; //Player Won!
-else if((board[2] != ' ') && (board[2] == board[4])&&(board[2] == board[6]))
-        return player; //Player Won!
-else if((board[0] != ' ') && (board[0] == board[3])&&(board[3] == board[6]))
-        return player;
-else if((board[1] != ' ') && (board[1] == board[4])&&(board[4] == board[7]))
-        return player;
-else if((board[2] != ' ') && (board[2] == board[5])&&(board[5] == board[8]))
-        return player;
-else if (moves == BOARD_SIZE)
-        return DRAW;
-else
-        return 0; //Noone has won yet
+int winner_found(char board[]){
+        int i;
+        for(i=0,i<9,i+=3){
+                if (board[i]==board[i+1]){
+                        if (board[i+2]==board){
+                                puts("Hwin");
+                                break;
+                        }
+                }
+        } // checks horizontal wins
+        for(i=0,i<3,i+=2){
+                if(board[i]==board[i+2]){
+                        if(board[i+2]==board[i+4])
+                        puts("dwin");
+                }
+        } // checks diagonal wins
+        for(i=0,i<3,i++){
+                if (board[i]==board[i+3]){
+                        if (board[i+6]==board){
+                                puts("Hwin");
+                                break;
+                        }
+                }
+        } // checks vertical wins
 }
