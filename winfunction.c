@@ -28,7 +28,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int winner_found(char board[]);
+void winner_found(char board[]);
 int main(void){
         int i;
         char gamma[9];
@@ -66,4 +66,5 @@ int winner_found(char board[]){
                         }
                 }
         }// checks vertical wins
+        return;
 }
