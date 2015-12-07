@@ -21,7 +21,7 @@ int main(void){
         for(i=0;i<9;i++){
                 if (delta == 0){
                         print_board(board);
-                        implement user move;
+                        player_move(board, games[0])
                                 if (1==winner_found(board){
                                 print_board(board);
                                 i = 9; 
@@ -39,6 +39,7 @@ int main(void){
                                 print_board(board);
                                 winner_found(board);
                                 i = 9;
+                                continue;
                         }
                         --delta;
                         continue;
