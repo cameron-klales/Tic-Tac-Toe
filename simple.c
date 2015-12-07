@@ -18,6 +18,6 @@ void defaultmove(char board[], char j){
         }else if(board[7] != ' '){
                 board[7] = j;
         }else{
-                return
+                return;
         }
 }
