@@ -1,4 +1,4 @@
-void simplemove(char board[], char j){
+void bannanrama(char board[], char j){
         if(board[0] != ' '){
                 board[0] = j;
         }else if(board[2] != ' '){
