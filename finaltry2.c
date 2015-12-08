@@ -18,9 +18,9 @@ int main(void){
         int z=1;
         int delta = determine_order(games);
         int d;
-        
-        while (z==1){
         blanker(board);
+        while (z==1){
+        
         while(i<9){
                 if (delta == 0){
                         puts("apple")
@@ -53,6 +53,7 @@ int main(void){
                 if(i==9){
                         puts("Draw");
                         puts("(would you like to play again? (press 1 for yes and any other number for no)");
+                        blanker(board);
                         scanf("%i\n", &z);
                 }
         
