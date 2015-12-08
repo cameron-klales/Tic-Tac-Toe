@@ -33,7 +33,7 @@ int main(void){
                                 };
                         i++;
                         delta++;
-                        continue;
+                        break;
                 };
                 
                 if(delta ==1){
@@ -46,9 +46,11 @@ int main(void){
                                 break;
                         }
                 delta--;
-                continue;
-                i++;        
+                i++
+                break;
                 };
+                if(i==9);
+                        puts("Draw");
         }
         puts("(would you like to play again? (press 1 for yes and any other number for no)");
         scanf("%i\n", &z);
