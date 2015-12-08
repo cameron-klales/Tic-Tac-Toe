@@ -129,7 +129,7 @@ int win_chance(char board[], char j){
         for(i=0;i<3;i++){
         if(board[i]!=' '){
                 if(board[i]==board[i+1]){
-                if(board[i]==' '){
+                if(board[i+2]==' '){
                         board[i+2]=j;
                         return 0;
                         }
@@ -138,7 +138,7 @@ int win_chance(char board[], char j){
       
         if(board[i]!=' '){
                 if(board[i]==board[i+2]){
-                if(board[i]==' '){
+                if(board[i+1]==' '){
                         board[i+1]=j;
                         return 0;
                         }
@@ -153,12 +153,12 @@ int win_chance(char board[], char j){
                         }
                 }
         }//checks for wins in c1
-};
+}
         // break
         for(i=0;i<9;i+=3){
         if(board[i]!=' '){
                 if(board[i]==board[i+3]){
-                        if(board[i]==' '){
+                        if(board[i+2]==' '){
                         board[i+2]=j;
                         return 0;
                         }
@@ -167,7 +167,7 @@ int win_chance(char board[], char j){
     
         if(board[i]!=' '){
                 if(board[i]==board[i+2]){
-                        if(board[i]==' '){ 
+                        if(board[i+1]==' '){ 
                         board[i+1]=j;
                         return 0;
                         }
