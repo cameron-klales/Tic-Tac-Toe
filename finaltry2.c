@@ -19,7 +19,7 @@ int main(void){
         int delta = determine_order(games);
         int d;
         
-     while (z==1){
+        while (z==1){
         blanker(board);
         while(i<9){
                 if (delta == 0){
@@ -32,9 +32,9 @@ int main(void){
                                 break;
                                 };
                         i++;
-                        delta++;
+                        delta = 1;
                         continue;
-                };
+                }
                 
                 if(delta ==1){
                         
@@ -45,10 +45,10 @@ int main(void){
                                 print_board(board);
                                 break;
                         }
-                delta--;
+                delta = 0;
                 i++;
                 continue;
-                };
+                }
         }
                 if(i==9){
                         puts("Draw");
