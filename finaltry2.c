@@ -23,31 +23,31 @@ int main(void){
         
         while(i<9){
                 if (delta == 0){
-                        puts("apple")
+                        puts("Current Board");
                         print_board(board);
                         player_move(board, games[0]);
+                        puts("Board after move");
                         print_board(board);
-                                if (1==winner_found(board)){
-                                print_board(board);
+                        if(0==winner_found(board);){
                                 break;
-                                };
+                        }
                         i++;
                         delta = 1;
                         continue;
                 }
                 
                 if(delta ==1){
-                        
-                        d = win_chance(board, games[1]);
-                        if(d!=0){
-                                defaultmove(board, games[1]);
-                        }if (1==winner_found(board)){
-                                print_board(board);
+                        puts("Current Board");
+                        id(0 != win_chance(board, games[1])){
+                        defaultmove(board, games[1]);}
+                        puts("Board after move");
+                        print_board(board);
+                        if(0==winner_found(board);){
                                 break;
                         }
-                delta = 0;
-                i++;
-                continue;
+                        delta = 0;
+                        i++;
+                        continue;
                 }
         }
                 if(i==9){
@@ -259,16 +259,27 @@ int winner_found(char board[]){
                         }
                 }
         } // checks horizontal wins
-        for(i=0;i<3;i+=2){
-                if(board[i]!=' '){
+        for(i=0,i<1,++1){
+        if(board[i]!=' '){
                 
                         if(board[i]==board[i+2]){
-                                if(board[i+2]==board[i+4])
+                                if(board[i+4]==board[i+8])
                                 printf("The Winner is %c",board[i]);
                                 return 1;
                         }
+        }
+        }
+        for(i=0,i<1,++1){
+        if(board[i+2]!=' '){
                 
-        } // checks diagonal wins
+                        if(board[i+4]==board[i+2]){
+                                if(board[i+2]==board[i+6])
+                                printf("The Winner is %c",board[i]);
+                                return 1;
+                        }
+        }
+        }
+         // checks diagonal wins
         for(i=0;i<3;i++){
                 if(board[i]!=' '){
                         if (board[i]==board[i+3]){
