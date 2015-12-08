@@ -49,11 +49,13 @@ int main(void){
                 i++;
                 continue;
                 };
-                if(i==9);
-                        puts("Draw");
         }
-        puts("(would you like to play again? (press 1 for yes and any other number for no)");
-        scanf("%i\n", &z);
+                if(i==9){
+                        puts("Draw");
+                        puts("(would you like to play again? (press 1 for yes and any other number for no)");
+                        scanf("%i\n", &z);
+                }
+        
 }
 }
 void blanker(char gamma[]){
