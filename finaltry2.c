@@ -102,7 +102,7 @@ int determine_order(char xo[]){
                 }
 }
 void defaultmove(char board[], char j){
-        if(board[0] != ' '){
+        if(board[0] == ' '){
                 board[0] = j;
                 return;
         }else if(board[2] == ' '){
