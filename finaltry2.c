@@ -33,7 +33,7 @@ int main(void){
                                 };
                         i++;
                         delta++;
-                        break;
+                        continue;
                 };
                 
                 if(delta ==1){
@@ -46,8 +46,8 @@ int main(void){
                                 break;
                         }
                 delta--;
-                i++
-                break;
+                i++;
+                continue;
                 };
                 if(i==9);
                         puts("Draw");
@@ -66,8 +66,7 @@ void blanker(char gamma[]){
 void print_board(char board[]){
 
         puts("");
-        printf(" %c | %c | %c \n",board[0],board[1],board[2]);// prints array values to the b
-oard
+        printf(" %c | %c | %c \n",board[0],board[1],board[2]);// prints array values to the board
         puts("-----------");
         printf(" %c | %c | %c \n",board[3],board[4],board[5]);
         puts("-----------");
@@ -95,8 +94,7 @@ int determine_order(char xo[]){
                                 return 1;
                         }else{
                 puts("Your Input was not Valid. Try again");
-                continue; // Loop ensures user input is valid. Once the user has given valid 
-input, sets and returns z to capital x or o.
+                continue; // Loop ensures user input is valid. Once the user has given valid input, sets and returns z to capital x or o.
                         }
                 }
 }
