@@ -212,7 +212,6 @@ int win_chance(char board[], char j){
 
 int player_move(char board[], char player_char){
         int i;
-        
         while (1){
         i = getspace();
         if (board[i] == ' '){
@@ -243,6 +242,7 @@ int winner_found(char board[]){
                         if (board[i]==board[i+1]){
                                 if (board[i+2]==board[i+1]){
                                         printf("The Winner is %c",board[i]);
+                                        return 1;
                                 }
                         }
                 }
@@ -253,6 +253,7 @@ int winner_found(char board[]){
                         if(board[i]==board[i+2]){
                                 if(board[i+2]==board[i+4])
                                 printf("The Winner is %c",board[i]);
+                                return 1;
                         }
                 
         } // checks diagonal wins
@@ -261,11 +262,12 @@ int winner_found(char board[]){
                         if (board[i]==board[i+3]){
                                 if (board[i+6]==board[i+3]){
                                         printf("The Winner is %c",board[i]);
+                                        return 1;
                                 }
                         }
                 }
         };// checks vertical wins
-        return;
+        return 0;
 }}
 int player_move(char board[], char player_char){
         int i;
