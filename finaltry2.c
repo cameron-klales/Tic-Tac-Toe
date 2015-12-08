@@ -23,7 +23,7 @@ int main(void){
         blanker(board);
         while(i<9){
                 if (delta == 0){
-
+                        puts("apple")
                         print_board(board);
                         player_move(board, games[0]);
                         print_board(board);
